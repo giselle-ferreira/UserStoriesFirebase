@@ -1,0 +1,48 @@
+.example-card {
+  margin: 20px;
+  width: 350px;
+  padding: 25px;
+  height: 180px;
+}
+
+mat-card-actions {
+  display: flex;
+  gap: 5px;
+}
+
+mat-card-content {
+  height: 55px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: -10px;
+}
+
+.btn-create {  
+  margin-top: 24px;  
+}
+
+.project-name {
+  margin-top: 0px;
+  display: flex;
+  margin-left: 20px;
+}
+
+.cards span {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(128, 128, 128);
+}
+
+.info{
+  display: flex;
+  margin-left: 40px;
+}
+
+.form-delete {
+  margin-left: -10px;
+  margin-top: 23px;
+}

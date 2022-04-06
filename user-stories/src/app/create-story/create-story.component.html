@@ -1,0 +1,25 @@
+<mat-dialog-content>
+  <h2>Criar Nova História</h2>
+  <form #create="ngForm" (ngSubmit)="createStory()" method="POST" >
+
+    <div>
+      <mat-form-field class="full" appearance="outline">
+        <mat-label>Código</mat-label>
+        <input type="text" matInput name="storyId" ngModel placeholder="us000">
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field class="full" appearance="outline" >
+        <mat-label>Descrição</mat-label>
+        <textarea type="text" #text matInput name="description" ngModel rows="6" cols="35" placeholder="Eu, como usuário..."></textarea>
+      </mat-form-field>
+    </div>
+
+    <div>
+      <button mat-raised-button color="accent">Criar</button>
+      <button mat-button color="accent" (click)="closeModal($event)">Fechar</button>
+    </div>
+  </form>
+  
+</mat-dialog-content>

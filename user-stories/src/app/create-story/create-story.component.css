@@ -1,0 +1,23 @@
+mat-dialog-content {
+  width: 280px;  
+}
+
+h2 {
+  font-weight: 400;
+}
+
+mat-label {
+  color: #000;
+}
+
+form {
+  max-width: 280px;
+}
+
+.full {
+  width: 100%;
+}
+
+/* .close-btn {
+
+} */

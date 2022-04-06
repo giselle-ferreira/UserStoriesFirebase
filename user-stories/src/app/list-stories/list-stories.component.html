@@ -1,0 +1,46 @@
+  <div class="info">
+    <div class="btn-create" (click)="createStory(storyId, description)">
+      <button mat-raised-button color="accent" matTooltip="Criar história">CRIAR NOVA HISTÓRIA</button>
+    </div>
+
+    <div class="project-name">
+      <form #saveName="ngForm" (ngSubmit)="saveProjName()">
+      <mat-form-field class="full" appearance="standard">
+        <mat-label>Nome do Projeto</mat-label>
+        <input type="text" matInput name="Projeto" [(ngModel)]="Projeto">
+        </mat-form-field>
+        <button mat-icon-button matTooltip="Salvar" color="accent"><mat-icon>done</mat-icon></button>
+      </form>
+      <form class="form-delete" (ngSubmit)="resetStorage()">
+        <button mat-icon-button matTooltip="Apagar" color="accent"><mat-icon>delete</mat-icon></button>
+      </form>
+    </div>
+</div>
+
+<section class="cards">
+  <div *ngFor="let story of stories; index as i">
+    <mat-card class="example-card">
+      <mat-card-title>História <span>cod.</span>[{{story.storyId}}]</mat-card-title>
+      <mat-card-subtitle >{{ Projeto }}</mat-card-subtitle>
+      <mat-card-content>
+        <p >{{story.description}}</p>
+      </mat-card-content>
+      <mat-card-actions>
+          <button
+          mat-mini-fab
+          mat-button
+          color="primary"
+          matTooltip="Editar"
+          (click)="updateStory(story.storyId)">
+            <mat-icon>edit</mat-icon>
+          </button>
+          
+        <form (ngSubmit)="deleteStory(story.storyId)" method="POST">
+          <button mat-mini-fab mat-button color="warn" matTooltip="Deletar" >
+            <mat-icon>delete</mat-icon>
+          </button>
+        </form>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</section>
